@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Price from "./pages/Price";
 import Signup from "./pages/Signup";
+import Check from "./pages/Check";
 
 function App() {
   return (
