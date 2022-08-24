@@ -1,0 +1,47 @@
+.mainHeadDiv{
+
+    margin: auto;
+    margin-top: 150px;
+    width: 800px;
+    height: 384px;
+}
+.HeadDiv>h1{
+    color: #333333;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+}
+.HeadDiv>p{
+    font-size: 22px;
+    text-align: center;
+    color: #767676;
+}
+.tryBtn{
+    margin: auto;
+    height: 48px;
+    width: 211px;
+    border: 1px solid #57BB71;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center; /* change this to space between after adding img*/
+    align-items: center;
+    color: #57BB71;
+}
+.tryBtn:hover{
+    background-color: #57BB71;
+    color: white;
+}
+.listParaDiv{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    color: #7C7C7C;
+}
+.dot{
+    margin-top: -23px;
+    font-size: 50px;
+}
+.imgDiv{
+    text-align: center;
+}
