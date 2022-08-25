@@ -1,5 +1,6 @@
 import React from "react";
-import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from 'react-icons/fa';
+
 import "./css/login.css";
 import {
   Center,
@@ -14,7 +15,6 @@ import {
   Stack,
   Link,
   Divider,
-  HStack,
   VStack,
 } from "@chakra-ui/react";
 // import { Link as chakraLink } from "@chakra-ui/react";
@@ -59,10 +59,10 @@ const Login = () => {
                   w={"full"}
                   maxW={"md"}
                   variant={"outline"}
-                  leftIcon={<FcGoogle />}
+                  leftIcon={<FaGithub />}
                 >
                   <Center>
-                    <Text>Sign in with Google</Text>
+                    <Text>Sign in with Github</Text>
                   </Center>
                 </Button>
               </Center>
@@ -162,10 +162,10 @@ const Login = () => {
             w={"full"}
             maxW={"md"}
             variant={"outline"}
-            leftIcon={<FcGoogle />}
+            leftIcon={<FaGithub />}
           >
             <Center>
-              <Text>Sign in with Google</Text>
+              <Text>Sign in with Github</Text>
             </Center>
           </Button>
         </Center>

@@ -10,7 +10,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from 'react-icons/fa';
 import React from "react";
 
 const Signup = () => {
@@ -32,10 +32,10 @@ const Signup = () => {
               bg={"white"}
               border="1px solid #bcaa9c"
               p="12% 90% 12% 90%"
-              leftIcon={<FcGoogle />}
+              leftIcon={<FaGithub />}
             >
               <Center>
-                <Text>Sign in with Google</Text>
+                <Text>Sign in with Github</Text>
               </Center>
             </Button>
           </Center>
