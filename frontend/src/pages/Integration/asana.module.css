@@ -12,6 +12,7 @@
     font-weight: 500;
 }
 .HeadDiv>p{
+    margin-top: 20px;
     font-size: 22px;
     text-align: center;
     color: #767676;
@@ -27,6 +28,7 @@
     justify-content: center; /* change this to space between after adding img*/
     align-items: center;
     color: #57BB71;
+    margin-top: 30px;
 }
 .tryBtn:hover{
     background-color: #57BB71;
@@ -37,11 +39,153 @@
     justify-content: center;
     gap: 5px;
     color: #7C7C7C;
+    margin-top: 20px;
 }
 .dot{
-    margin-top: -23px;
+    margin-top: -43px;
     font-size: 50px;
 }
 .imgDiv{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.whyAsana{
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    width: 1156px;
+    justify-content: space-between;
+}
+
+.leftWhyAsana{
+    width: 385px;
+}
+.leftWhyAsana>h1{
+    color: #333333;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 40px;
+    word-spacing: 0px;
+}
+
+.rightWhyAsana{
+    width: 674px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.rightWhyAsana h1{
+    font-size: 16px;
+    color: #333333;
+}
+.rightWhyAsana p{
+    color: #7C7C7C;
+    font-size: 18px;
+    margin-top: 5px;
+}
+.rightWhyAsana u{
+    color: #4A90E2;
+}
+.rightWhyAsana mark{
+    background-color: #fcfaad;
+}
+
+.howDiv{
+    margin: auto;
+    width: 1040px;
+    margin-top: 200px;
+    
+}
+.howDivDetail{
+    
     text-align: center;
 }
+.howDivDetail>h1{
+    color: #333333;
+    font-size: 36px;
+    font-weight: 500;
+}
+.howDivDetail>p{
+    font-size: 18px;
+    color: #767676;
+    margin-top: 0px;
+}
+
+.howIntDiv{
+    width: 960px;
+    margin: auto;
+}
+
+.intCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+.cardDetail{
+    width: 325px;
+}
+.intCard h1{
+    color: #333333;
+    font-size: 22px;
+    font-weight: 500;
+}
+.intCard p{
+    color: #7C7C7C;
+    font-size: 17px;
+}
+
+.starDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 120px;
+    height: 131px;
+    background-color: rgb(237, 252, 249);
+}
+.starDiv p{
+    font-size: 18px;
+    color: #767676;
+}
+
+.faqDiv{
+    width: 1220px;
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.leftFaqDiv{
+    width: 481px;
+    margin-left: 20px;
+}
+.leftFaqDiv>h1{
+    color: #333333;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.leftFaqDiv>p{
+    font-size: 18px;
+    color: #767676;
+    margin-bottom: 50px;
+}
+.rightFaqDiv{
+    width: 580px;
+    margin-right: 20px;
+}
+
+.faqH1{
+    color: #333333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.partnerDiv>img{
+    margin: auto;
+}
+
+
