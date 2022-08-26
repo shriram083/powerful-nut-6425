@@ -1,8 +1,9 @@
-import { AUTHENTICATION_FAILURE, AUTHENTICATION_REQUEST, AUTHENTICATION_SUCCESS } from "./type";
-
+import {  LOGGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "./type";
+   
+const t=localStorage.getItem("token");
 const init={
     isAuth:false,
-    token:"",
+    token: t || "",
     isError:false,
     isLoading:false
 }
@@ -10,13 +11,14 @@ const init={
 export const authReducer=(state=init,{type,payload})=>{
     switch(type)
     {
-        case AUTHENTICATION_REQUEST:{
+        case LOGIN_REQUEST:{
             return {...state,isLoading:true,isAuth:false};
         }
-        case AUTHENTICATION_SUCCESS:{
+        case LOGIN_SUCCESS:{
+            localStorage.setItem("token",payload);
             return {...state,isLoading:false,token:payload,isAuth:true};
         }
-        case AUTHENTICATION_FAILURE:{
+        case LOGGIN_FAILURE:{
             return {...state,isLoading:false,isError:true,isAuth:false,token:""};
         }
         default:{
