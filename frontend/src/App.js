@@ -6,7 +6,8 @@ import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Price from "./pages/Price";
 import Signup from "./pages/Signup";
-import Check from "./pages/Check";
+import Footer from "./components/Footer";
+//import Check from "./pages/Check";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/price" element={<Price />} />
         <Route path="/demo" element={<Demo />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
