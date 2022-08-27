@@ -10,34 +10,33 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {useDispatch} from "react-redux"
+import { useDispatch } from "react-redux";
 import { signupreq } from "../reducer/authReducer/action";
 const Signup = () => {
-  const [email,setEmail]=useState("");
-  const [password,setPassword]=useState("");
-  const [url,setUrl]=useState("");
-  const dispatch=useDispatch();
-  useEffect(()=>{
-    axios.get("https://obscure-reef-85874.herokuapp.com/auth/github/req").then(res=>setUrl(res.data)).catch(err=>console.log("hello"));
-  },[])
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [url, setUrl] = useState("");
+  const dispatch = useDispatch();
+  useEffect(() => {
+    axios
+      .get("https://obscure-reef-85874.herokuapp.com/auth/github/req")
+      .then((res) => setUrl(res.data))
+      .catch((err) => console.log("hello"));
+  }, []);
 
-
-
-
-const handleSignup=()=>{
-const payload={
-  email:email,
-  password:password
-}
-dispatch(signupreq(payload));
-}
-
+  const handleSignup = () => {
+    const payload = {
+      email: email,
+      password: password,
+    };
+    dispatch(signupreq(payload));
+  };
 
   return (
-    <Box>
+    <Box mt={"150px"}>
       <Stack align={"center"} w={"60%"} margin="auto" marginBottom={8}>
         <Heading fontSize={"5xl"}>
           Make your team more productive with Everhour
@@ -57,13 +56,27 @@ dispatch(signupreq(payload));
               leftIcon={<FaGithub />}
             >
               <Center>
-                <Text><a href={url}>Sign up with Github</a></Text>
+                <Text>
+                  <a href={url}>Sign up with Github</a>
+                </Text>
               </Center>
             </Button>
           </Center>
           <Text>or</Text>
-          <Input value={email} onChange={(e)=>setEmail(e.target.value)} marginRight={4} p={6} placeholder="Work email..."></Input>
-          <Input value={password} onChange={(e)=>setPassword(e.target.value)} marginRight={4} p={6} placeholder="password..."  />
+          <Input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            marginRight={4}
+            p={6}
+            placeholder="Work email..."
+          ></Input>
+          <Input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            marginRight={4}
+            p={6}
+            placeholder="password..."
+          />
           <Button onClick={handleSignup} p={6} bg={"green.400"} color="white">
             Sign up
           </Button>
@@ -85,7 +98,9 @@ dispatch(signupreq(payload));
               support to project management to design.”
               <br />
               <br />
-              <Text>— Ivan M. (Source: <span >G2Crowd</span>)</Text>
+              <Text>
+                — Ivan M. (Source: <span>G2Crowd</span>)
+              </Text>
             </Box>
             <Box margin={6} p={8} boxShadow="xl">
               "<mark>We are using Everhour as a core business software</mark>,
@@ -174,7 +189,7 @@ dispatch(signupreq(payload));
               <Text>— Dimitris R. (Source: Capterra)</Text>
             </Box>
             <Box margin={6} p={8} boxShadow="xl">
-              “<mark >Everhour has already paid for itself for the year</mark> by
+              “<mark>Everhour has already paid for itself for the year</mark> by
               helping me track time I was missing in client projects. It is easy
               to use, has friendly customer service people, and the reports make
               it easy to invoice clients and track projects.”
