@@ -1,1 +1,157 @@
+.mainbox{
+    background-color: whitesmoke;
+    height:1700px;
+    width:100%;
+    border: 1px solid black
+}
+
+.courese-box{
+box-shadow:  rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ height:800px;
+ width:330px;
+ margin: auto;
+ margin-top: 120px;
+}
+
+.question-sec{
+    height:700px;
+    width:100%;
+  
+    margin-top: 180px;
+}
+
+
+.faqDiv{
+    width: 1220px;
+    margin: auto;
+   
+    display: flex;
+    justify-content: space-between;
+}
+.leftFaqDiv{
+    width: 481px;
+    margin-left: 20px;
+}
+.leftFaqDiv>h1{
+    color: #333333;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.leftFaqDiv>p{
+    font-size: 18px;
+    color: #767676;
+    margin-bottom: 50px;
+}
+.rightFaqDiv{
+    width: 580px;
+    margin-right: 20px;
+}
+
+.faqH1{
+    color: #333333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+
+.signupDiv{
+    width: 1156px;
+    margin: auto;
+    display: flex;
+    gap: 250px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.leftSignupDiv{
+    max-height: 201px;
+}
+.leftSignupDiv>h1{
+    font-size: 36px;
+    font-weight: 500;
+    color: #333333;
+    margin-left: -10%;
+}
+.leftSignupDiv>p{
+    font-size: 18px;
+    color: #767676;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    margin-left: -120px;
+}
+
+.signupInputDiv{
+    display: flex;
+    gap: 10px;
+}
+.signupInputDiv>input{
+    height: 48px;
+    width: 308px;
+}
+
+.signupInputDiv>div{
+    height: 48px;
+    width: 152px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #57BB71;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.signupInputDiv+div{
+    display: flex;
+    height:20px;
+    gap: 8px;
+    margin-top: 10px;
+}
+.signupInputDiv+div>p{
+    color: #767676;
+    font-size: 17px;
+}
+
+.rightSignupDiv>ul{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+    list-style: none;
+    margin-top: 30px;
+    margin-left: -50px;
+}
+
+
+ul li::before{
+    content: "\2022";
+    color: #57BB71;
+    font-weight: bold;
+    font-size: 30px;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -15%;
+    margin-top: -30px;
+}
+
+.first{
+    margin-right:-10px ;
+}
+.second{
+    margin-right: 20px;
+}
+.third{
+    margin-right: 150px;
+}
+.fourth{
+    margin-right: 175px;
+}
+.fifth{
+    margin-right: 45px;
+}
+.sixth{
+    margin-right: 76px;
+}
 
