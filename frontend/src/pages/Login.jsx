@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub } from 'react-icons/fa';
+import axios from "axios" 
 
 import "./css/login.css";
 import {
@@ -17,8 +18,39 @@ import {
   Divider,
   VStack,
 } from "@chakra-ui/react";
-// import { Link as chakraLink } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { useDispatch} from "react-redux";
+import { loginreq } from "../reducer/authReducer/action";
+import {useNavigate} from "react-router-dom"
 const Login = () => {
+  const navigate=useNavigate()
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+  const dispatch=useDispatch();
+const [url,setUrl]=useState("");
+useEffect(()=>{
+  axios.get("https://obscure-reef-85874.herokuapp.com/auth/github/req").then(res=>setUrl(res.data)).catch(err=>console.log("hello"));
+},[])
+
+const token=localStorage.getItem("token");
+if(token){
+ navigate("/")
+}
+
+const handleLogin=()=>{
+  const payload={
+    email:email,
+    password:password
+  }
+  dispatch(loginreq(payload));
+  }
+
+
+
+
+
+
+
   return (
     <Box>
       <Stack align={"center"}>
@@ -56,13 +88,14 @@ const Login = () => {
             <Stack spacing={6}>
               <Center p={"30px 20px 0px 20px"}>
                 <Button
+                // onClick={handleGit}
                   w={"full"}
                   maxW={"md"}
                   variant={"outline"}
                   leftIcon={<FaGithub />}
                 >
                   <Center>
-                    <Text>Sign in with Github</Text>
+                    <Text><a href={url}>Login with github</a></Text>
                   </Center>
                 </Button>
               </Center>
@@ -71,12 +104,11 @@ const Login = () => {
               >
                 or
               </Text>
-              {/* <FormControl id="email"> */}
-                <Input type="email" color={"black"} placeholder="ENTER YOUR EMAIL..." p={6} />
-              {/* </FormControl> */}
-              {/* <FormControl id="password"> */}
-                <Input type="password" placeholder="Password..."  p={6} />
-              {/* </FormControl> */}
+          
+                <Input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" color={"black"} placeholder="ENTER YOUR EMAIL..." p={6} />
+            
+                <Input value={password} type="password" onChange={(e)=>setPassword(e.target.value)} placeholder="Password..."  p={6} />
+            
               <Stack spacing={2}>
                 <Stack
                   direction={{ base: "column", sm: "row" }}
@@ -85,6 +117,7 @@ const Login = () => {
                 ></Stack>
                <Box margin={"auto"} >
                <Button
+               onClick={handleLogin}
                 p={6}
                 w="70%"
                 margin={"auto"}
@@ -165,7 +198,7 @@ const Login = () => {
             leftIcon={<FaGithub />}
           >
             <Center>
-              <Text>Sign in with Github</Text>
+              <Text><a href={url}>Or sign up with Google Account</a></Text>
             </Center>
           </Button>
         </Center>
