@@ -7,11 +7,16 @@ import Integration from "./navbarComponents/Integration";
 const Navbar = () => {
   return (
     <Flex
+      position={"fixed"}
+      top={"0px"}
+      width={"100%"}
       alignItems={"center"}
       justifyContent={"space-between"}
       gap={"30px"}
       padding={"20px 30px"}
       borderBottom="1px solid gray"
+      backgroundColor={"white"}
+      mb={"50px"}
     >
       <Flex gap={"30px"} alignItems="center">
         <Link to={"/"}>
