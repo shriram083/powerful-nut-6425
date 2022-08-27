@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Box, Image } from "@chakra-ui/react";
 import Slider from "../components/homepageComponents/Slider";
@@ -7,8 +8,22 @@ import timeTracking from "../assets/timeTracking.png";
 import HomeBody from "../components/homepageComponents/HomeBody";
 import Popular from "../components/homepageComponents/Popular";
 import poster from "../assets/HomePoster.png";
+import { useEffect } from "react";
+import {  useSearchParams } from "react-router-dom";
 
 const HomePage = () => {
+const [searchParams,setSearchParams]=useSearchParams();
+const forToken=()=>{
+const code=searchParams.get("code");
+localStorage.setItem("token",code);
+
+}
+
+
+useEffect(()=>{
+forToken();
+},[])
+
   return (
     <Box>
       <HomeTop rating={rating} />

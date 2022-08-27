@@ -1,22 +1,31 @@
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, HStack, Input } from '@chakra-ui/react';
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  HStack,
+  Input,
+} from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 
-import google from './assets/google-svgrepo-com.svg'
-import React from 'react'
-import style from './asana.module.css'
-const Asana = () => {
+import google from "./assets/google-svgrepo-com.svg";
+import React from "react";
+import style from "./clickup.module.css";
+const Clickup = () => {
   return (
     <>
       <div className={style.mainHeadDiv}>
         <div className={style.HeadDiv}>
-          <h1>Asana time tracking integration</h1>
+          <h1>ClickUp time tracking integration</h1>
           <p>
-            Time tracking in Asana with timesheets, budgeting, client reporting,
-            and payroll. Works inside Asana. No more tab switching!
+            Accurate time tracker for timesheets, budgeting, client reporting,
+            and payroll. Works inside ClickUp. No more tab switching!
           </p>
         </div>
         <div className={style.tryBtn}>
-          <p>Try with my Asana</p>
+          <p>Try with my ClickUp</p>
         </div>
         <div className={style.listParaDiv}>
           <p>Free to try</p>
@@ -29,27 +38,27 @@ const Asana = () => {
       <div className={style.imgDiv}>
         {/* <img src='https://blog-cdn.everhour.com/assets/images/new-design/background-elements/dotted/dimond-dotted-orange.png' alt='orangedotimg'/> */}
         <img
-          src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-primary.webp"
+          src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/clickup-primary.webp"
           alt="img"
         />
         {/* <img src='https://blog-cdn.everhour.com/assets/images/new-design/background-elements/dotted/oval-dotted-green.png' alt='green dotes img'/> */}
       </div>
-      <div className={style.whyAsana}>
-        <div className={style.leftWhyAsana}>
+      <div className={style.whyClickUp}>
+        <div className={style.leftWhyClickUp}>
           <h1>
-            Here is why Asana + Everhour is the best time tracking integration
-            on the market
+            Why Everhour is the best time tracking integration for ClickUp on
+            the market?
           </h1>
           <img
-            src="https://blog-cdn.everhour.com/assets/images/new-design/illustrations/primary-illustrations/asana-vs-everhour-with-bag.webp"
+            src="https://blog-cdn.everhour.com/assets/images/new-design/illustrations/primary-illustrations/clickup-vs-everhour-with-bag.webp"
             alt="meet img"
           />
         </div>
-        <div className={style.rightWhyAsana}>
+        <div className={style.rightWhyClickUp}>
           <div>
             <h1>1. Quick Setup</h1>
             <p>
-              When you connect Asana with Everhour <u>timesheet app</u>, we
+              When you connect ClickUp with Everhour <u>timesheet app</u>, we
               automatically sync your projects so that your team can start
               tracking time right away.
               <mark>No manual project setup required.</mark>
@@ -60,8 +69,8 @@ const Asana = () => {
             <p>
               You don’t need to explain to your staff how to use additional
               <u>employee time tracking software.</u> Time tracking controls
-              will <mark>appear right inside the Asana interface,</mark> making
-              it easy for them to track time.
+              will <mark>appear right inside the ClickUp interface,</mark>{" "}
+              making it easy for them to track time.
             </p>
           </div>
           <div>
@@ -85,28 +94,29 @@ const Asana = () => {
             <h1>5. Automatic updates</h1>
             <p>
               When you add a new project or change the name of the existing task
-              in Asana, Everhour will sync this change automatically. That means
-              your <mark>reports will always show the freshest data.</mark>
+              in ClickUp, Everhour will sync this change automatically. That
+              means your{" "}
+              <mark>reports will always show the freshest data.</mark>
             </p>
           </div>
           <div>
             <h1>6. Detailed reports</h1>
             <p>
-              Asana time tracking reports let you organize reported time using
-              <mark>various information from your Asana tasks</mark> such as
+              ClickUp time tracking reports let you organize reported time using
+              <mark>various information from your ClickUp tasks</mark> such as
               tags, sections, or custom fields. So you can dive deeper into{" "}
               <u>tracked work hours</u> analysis to get more accurate results.
             </p>
           </div>
         </div>
       </div>
-      <div className={style.howDiv}>
+      {/* <div className={style.howDiv}>
         <div className={style.howDivDetail}>
-          <h1>How does Everhour integrate with Asana?</h1>
+          <h1>How does Everhour integrate with ClickUp?</h1>
           <p>
-            After you successfully connected Everhour and Asana, there are
+            After you successfully connected Everhour and ClickUp, there are
             multiple <br></br> useful features you can start using directly in
-            your Asana interface
+            your ClickUp interface
           </p>
         </div>
         <div className={style.howIntDiv}>
@@ -121,7 +131,7 @@ const Asana = () => {
             </div>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-timer-on-project-board.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-timer-on-project-board.webp"
                 alt="timer"
               />
             </div>
@@ -129,7 +139,7 @@ const Asana = () => {
           <div className={style.intCard}>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-task-details-with-time.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-task-details-with-time.webp"
                 alt="timer"
               />
             </div>
@@ -152,7 +162,7 @@ const Asana = () => {
             </div>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-add-time.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-add-time.webp"
                 alt="timer"
               />
             </div>
@@ -160,7 +170,7 @@ const Asana = () => {
           <div className={style.intCard}>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-project-budgeting.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-project-budgeting.webp"
                 alt="timer"
               />
             </div>
@@ -184,7 +194,7 @@ const Asana = () => {
             </div>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-timesheet-modal.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-timesheet-modal.webp"
                 alt="timer"
               />
             </div>
@@ -192,14 +202,14 @@ const Asana = () => {
           <div className={style.intCard}>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-time-in-portfolio.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-time-in-portfolio.webp"
                 alt="timer"
               />
             </div>
             <div className={style.cardDetail}>
               <h1>Time on Portfolios</h1>
               <p>
-                Estimate and reported time will be displayed on Asana's
+                Estimate and reported time will be displayed on ClickUp's
                 Portfolio page.
               </p>
             </div>
@@ -215,7 +225,7 @@ const Asana = () => {
             </div>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-time-on-home-page.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-time-on-home-page.webp"
                 alt="timer"
               />
             </div>
@@ -223,7 +233,7 @@ const Asana = () => {
           <div className={style.intCard}>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-timeline.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-timeline.webp"
                 alt="timer"
               />
             </div>
@@ -240,7 +250,7 @@ const Asana = () => {
             <div className={style.cardDetail}>
               <h1>Project summary</h1>
               <p>
-                Everhour adds the Project Summary page right into Asana's
+                Everhour adds the Project Summary page right into ClickUp's
                 interface. So the information about time spent on the project,
                 budget usage, billable vs non-billable hours, etc. - everything
                 is just one click away.
@@ -248,12 +258,99 @@ const Asana = () => {
             </div>
             <div className={style.cardImgDiv}>
               <img
-                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/asana-everhour-tab.webp"
+                src="https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/ClickUp-everhour-tab.webp"
                 alt="timer"
               />
             </div>
           </div>
         </div>
+      </div> */}
+      <div className={style.howTrack}>
+        <h1>How to track time in ClickUp with Everhour</h1>
+        <ul>
+          <li>
+            <h1>Step 1: Create your Everhour account</h1>
+            <p>
+              Sign up for free and install our browser extension. This is how we
+              embed controls into the Clickup interface. We support all popular
+              browsers: Chrome, Firefox, Safari, Edge.
+            </p>
+          </li>
+          <li>
+            <h1>Step 2: Connect Everhour and ClickUp</h1>
+            <p>
+              After signup, Everhour will automatically sync all your projects.
+              You can choose between lists or folders to be your projects. Sync
+              happens periodically so all new projects that you create in
+              ClickUp will be visible in Everhour reports. Everhour also updates
+              the names of tasks or projects if they were renamed in ClickUp.
+              This way Everhour reports will always show you the freshest data.
+            </p>
+          </li>
+          <li>
+            <h1>Step 3: Invite your team</h1>
+            <p>
+              You need to invite your team to join Everhour. They will also need
+              to connect their ClickUp accounts and install our browser
+              extension. Only those you invite into Everhour will be able to
+              track time and see time progress (not necessarily all ClickUp
+              users). Your clients or guests will not see anything in ClickUp
+              unless you invite them.
+            </p>
+          </li>
+          <li>
+            <h1>Step 4: Track time inside ClickUp</h1>
+            <p>
+              You can track time using the timer or log time manually. You’ll
+              see the time reported by each employee and its progress, plus time
+              on parent and all subtasks.
+            </p>
+            <img
+              src="https://blog-cdn.everhour.com/assets/images/new-design/screens/guides/clickup-new-controls.webp"
+              alt="img"
+            />
+          </li>
+          <li>
+            <h1>Step 5: Track time via the Everhour browser extension</h1>
+            <p>
+              You don't necessarily need to open ClickUp or Everhour website. By
+              clicking on the timer icon in the browser toolbar you can quickly
+              start the timer, add time to any task, edit time or estimate, and
+              more.
+            </p>
+            <img
+              src="https://blog-cdn.everhour.com/assets/images/new-design/screens/time-tracking-extension.webp"
+              alt="img"
+            />
+          </li>
+          <li>
+            <h1>Step 6: Make custom reports with ClickUp data</h1>
+            <p>
+              There are a number of columns that show specific data coming from
+              ClickUp. Open a report builder and select any of the columns to
+              display the data in your report.
+            </p>
+            <img
+              src="https://blog-cdn.everhour.com/assets/images/new-design/screens/guides/report-builder-v2.webp"
+              alt="img"
+            />
+          </li>
+          <li>
+            <h1>Step 7: Find out more...</h1>
+            <p>
+              Timers page shows what your team is doing right now. Timesheet
+              page helps to view the structured picture of the time a member
+              spent for a week. Timecard page displays when a user started their
+              workday, when they had breaks and when they finished their work.
+              Timeoff page shows all vacations, sick leaves, and any other PTO
+              types.
+            </p>
+            <img
+              src="https://blog-cdn.everhour.com/assets/images/new-design/screens/guides/team-timers.webp"
+              alt="img"
+            />
+          </li>
+        </ul>
       </div>
       <div className={style.starDiv}>
         <div>
@@ -299,15 +396,16 @@ const Asana = () => {
                     marginTop={5}
                     marginBottom={5}
                   >
-                    Is Everhour easy to connect with Asana?
+                    Is Everhour easy to connect with ClickUp?
                   </Box>
                   <AccordionIcon boxSize={7} />
                 </AccordionButton>
               </h1>
               <AccordionPanel pb={4} fontSize={16} color="#333333">
-                Yes. Just click Try with my Asana and connect it with Everhour.
-                The next step would be to install our browser extension. And
-                that's it! Open your Asana and start tracking time.
+                Yes. Just click Try with my ClickUp and connect it with
+                Everhour. The next step would be to install our browser
+                extension. And that's it! Open your ClickUp and start tracking
+                time.
               </AccordionPanel>
             </AccordionItem>
 
@@ -323,15 +421,15 @@ const Asana = () => {
                     marginTop={5}
                     marginBottom={5}
                   >
-                    How does Everhour for Asana work?
+                    How does Everhour for ClickUp work?
                   </Box>
                   <AccordionIcon boxSize={7} />
                 </AccordionButton>
               </h1>
               <AccordionPanel pb={4} fontSize={16} color="#333333">
-                After integration, Everhour embeds controls into the Asana
+                After integration, Everhour embeds controls into the ClickUp
                 interface and thus extends it with many useful features. You can
-                keep tracking time from Asana, through the Everhour website or
+                keep tracking time from ClickUp, through the Everhour website or
                 browser extension.
               </AccordionPanel>
             </AccordionItem>
@@ -348,13 +446,43 @@ const Asana = () => {
                     marginTop={5}
                     marginBottom={5}
                   >
-                    What if not all my Asana users need time tracking?
+                    Why choose Everhour for time tracking in ClickUp?
                   </Box>
                   <AccordionIcon boxSize={7} />
                 </AccordionButton>
               </h1>
               <AccordionPanel pb={4} fontSize={16} color="#333333">
-                No problem. You can invite and pay only for those Asana users
+                ClickUp’s native time tracker is simple and easy to use.
+                However, it is quite basic and lacks some essential time
+                tracking features. For example, time approval, tracking
+                vacations, and other leave types, project billing and budgeting,
+                invoices based on tracked time and expenses, etc. No time
+                tracker can ever compete with ClickUp in terms of project
+                management. But, at the same time, time tracking always requires
+                in-depth, individual attention. The best apps focus on just one
+                thing and do it really, really well.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <h1>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontSize={20}
+                    fontWeight={500}
+                    color="#333333"
+                    marginTop={5}
+                    marginBottom={5}
+                  >
+                    What if not all my ClickUp users need time tracking?
+                  </Box>
+                  <AccordionIcon boxSize={7} />
+                </AccordionButton>
+              </h1>
+              <AccordionPanel pb={4} fontSize={16} color="#333333">
+                No problem. You can invite and pay only for those ClickUp users
                 who are going to track time and use other Everhour features.
               </AccordionPanel>
             </AccordionItem>
@@ -371,7 +499,7 @@ const Asana = () => {
                     marginTop={5}
                     marginBottom={5}
                   >
-                    Will someone else (like my clients) see my time?
+                    Will someone else (like clients) see my time?
                   </Box>
                   <AccordionIcon boxSize={7} />
                 </AccordionButton>
@@ -379,7 +507,7 @@ const Asana = () => {
               <AccordionPanel pb={4} fontSize={16} color="#333333">
                 Only those people who are a part of your Everhour team and
                 installed our browser extension can see time-related data in
-                Asana.
+                ClickUp.
               </AccordionPanel>
             </AccordionItem>
 
@@ -395,41 +523,15 @@ const Asana = () => {
                     marginTop={5}
                     marginBottom={5}
                   >
-                    How to invite other team members?
+                    Does Everhour work on ClickUp native apps?
                   </Box>
                   <AccordionIcon boxSize={7} />
                 </AccordionButton>
               </h1>
               <AccordionPanel pb={4} fontSize={16} color="#333333">
-                After you register your Everhour account and connect it with
-                Asana, you can track time only for yourself. To invite
-                teammates, you should go to the Everhour team page and manually
-                invite your team by entering their emails. Each employee should
-                finish the signup flow and connect their Asana account.
-              </AccordionPanel>
-            </AccordionItem>
-
-            <AccordionItem>
-              <h1>
-                <AccordionButton>
-                  <Box
-                    flex="1"
-                    textAlign="left"
-                    fontSize={20}
-                    fontWeight={500}
-                    color="#333333"
-                    marginTop={5}
-                    marginBottom={5}
-                  >
-                    Does Everhour work on Asana's native apps?
-                  </Box>
-                  <AccordionIcon boxSize={7} />
-                </AccordionButton>
-              </h1>
-              <AccordionPanel pb={4} fontSize={16} color="#333333">
-                Unfortunately, due to technical reasons, this is not possible.
-                Only folks at Asana can decide to integrate with Everhour. No
-                other time tracker can do this.
+                Unfortunately, it is not possible due to technical reasons. Only
+                folks at ClickUp can decide to integrate with Everhour. Other
+                time trackers can't do this either.
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
@@ -442,110 +544,91 @@ const Asana = () => {
       <div className={style.reviewDiv}>
         <div>
           <p>
-            <mark>
-              “Everhour has the best integration with Asana compared to other
-              time tracking tools
-            </mark>{" "}
-            — including Asana’s preferred integration (Harvest). And it’s not
-            just because it’s more affordable than Harvest. With Harvest you
-            have to click the icon in the task to start the time, then you have
-            to set the project and task you want to track time for. That’s 3
-            additional clicks every time you want to track your time. With
-            Everhour you just click your button to start your time. The product
-            team at Everhour really gets UX here — their integration
-            automatically pulls in all relevant data to your task including task
-            name, section level, project, team, tags, literally everything
-            available via the API! Imagine how useful having all that rich data
-            can be if you want to report on things! No more settling for Asana’s
-            weak and fluffy dashboard reports. With Everhour’s rich data you can
-            export it into a data source to analyze or visualize in BI tools
-            like DataStudio or Tableau.” <br />
-            <br /> — Skyler R. (Source: G2.com)
+            <mark>“Everhour has a really nifty integration with</mark> ClickUp
+            and provides you the information in a single click. The interface is
+            very intuitive and helps us reduce the time needed to report hours
+            of different project tasks. On top of the nice integration, it goes
+            even further and provides a way to get more grip on a project by
+            defining a budget. And when all hours are written, you can customize
+            your reports or use the API to run queries/exports of the data. We
+            used Jira together with Timesheet, the performance withheld us from
+            quickly adding tickets and time. We found ClickUp and together with
+            Everhour we have a better solution which works faster and gives
+            better insights.”
+            <br />
+            <br /> — Paul G. (Source: Capterra)
           </p>
         </div>
         <div>
           <p>
-            "Everhour is helping us figure out how much time we need to deliver
-            our various services. This, in turn, helps us make better decisions
-            and run our business better.<mark>The Asana integration is very useful and usable. It's terrific,
-              for example, that timing on sub-tasks is summed up in the main
-              task
+            "Simple, elegant, and powerful. My team uses Everhour for a few
+            reasons: (1) It has a simple, intuitive interface; (2) It has a
+            powerful reporting engine that we now use for generating various
+            insights, including employee time analyses and customer invoices;
+            (3){" "}
+            <mark>
+              It comes with solid integrations with task management software
             </mark>
-            . Tracking time estimates against actual time worked is helping us
-            figure out our capacity planning. The interface and tools are
-            well-designed and generally easy to use. Everhour's value-for-money
-            for features offered convinced us to make the move. It seemed to fit
-            our needs better than Toggl."
+            (we use ClickUp in particular); (4) Per-user costs are low, which is
+            essential for us as we have many part-time employees, some of whom
+            only work a few hours per week."
             <br />
-            <br /> — Jeffrey M. (Source: Capterra)
+            <br /> — Aaron M. (Source: G2.com)
           </p>
         </div>
         <div>
           <p>
-            "Best time tracking software ever!{" "}
-            <mark>
-              {" "}
-              Everhour's integration with Asana is seamless. More than that the
-              reporting that you can do with it is insane
-            </mark>
-            . I now have accurate historical data on all my previous jobs to
-            help me estimate future jobs more accurately. I love how staff
-            billable hours are automatically pulled through to reports. Everhour
-            helps keep track of my staff and how their time is allocated on
-            projects. Since the time we spend on projects is essential for
-            accurate quoting the time Everhour tracks is vital in keeping my
-            business profitable."
+            "We use Everhour for time recording of onsite activities of our
+            technicians and to record comments and document the projects. The
+            Everhour helps us to convert time into money without utilizing much
+            time. There is a hierarchy in the website if we follow that things
+            will get much easier in Everhour. We create the time records in
+            Everhour and associate them with the projects. The project will
+            generate its stats and will give us an insight into our income and
+            expense. I like Everhour and its connection with different web apps.
+            <mark>We have integrated it with Slack and ClickUp.</mark> The time
+            records get saved in Everhour, ClickUp uses it as a reference to
+            show it on a task, and a Slack channel notifies its user if there is
+            an action trigger."
             <br />
-            <br /> — Shaun D. (Source: G2.com)
+            <br /> — Shehroze M. (Source: TrustRadius)
           </p>
         </div>
         <div>
           <p>
-            <mark>
-              "I recently discovered that I can connect my Everhour with each of
-              my client's Asana accounts and it has changed the game for my time
-              tracking organization.
-            </mark>{" "}
-            I don't have to spend time creating tasks anymore because they are
-            already created by the client in Asana! A project manager's dream."
+            <mark>"Love Everhour with the ClickUp integration!</mark> I love
+            that I can dial down to exactly how much time we spend on each
+            project, client and task. It allows me to create money or time
+            budgets for each client per month, which is how I set it up. We need
+            to keep our staff time to a monthly limit to ensure we're not losing
+            money. I've been able to create time benchmarks using Everhour,
+            which is a beautiful thing."
             <br />
-            <br /> — Elizabeth V. (Source: G2.com)
+            <br /> — David S. (Source: Capterra)
           </p>
         </div>
         <div>
           <p>
-            "I've been using Everhour for over a year and things have been
-            great. I've used the major alternatives and Everhour is the most
-            seamless to use with the most features.
-            <mark>
-              {" "}
-              The ability to capture data directly from Asana and track time
-              without having to define a project every time you need to do so is
-              a huge time saver.
-            </mark>{" "}
-            The ability to also track budget based on whatever ways work best
-            for your business model is fantastic as well (e.g. by cost, hours,
-            billing, etc.). Everhour had a more seamless integration with
-            Asana-even better than Asana's own native integration with Harvest.
-            Everhour just works better and takes less effort/time." <br />
-            <br />— Skyler R. (Source: Capterra)
+            <mark>"Everhour is vital for our business.</mark> We love the ease
+            of integration with our existing software (crucially ClickUp). Great
+            UX/UI. Easy to create custom reports and monitor budgets on each
+            project we are working on. Simple to introduce to new team members.
+            Get your whole team to try it for a week, review your reports and
+            see how you can improve. The level of detail is so useful."
+            <br />
+            <br /> — Sarah M. (Source: G2.com)
           </p>
         </div>
         <div>
           <p>
-            “As a remote-based company, we highly rely on task management tools
-            such as Jira and Asana, and it's critical to control and gain
-            knowledge on how we spend our time, and that's what is Everhour used
-            for. Since we use two different tools, Jira for the tech team and
-            Asana for the management team,
-            <mark>
-              {" "}
-              we found in Everhour a very practical way to concentrate reporting
-              regardless of the task management tools every member of the team
-              uses."
-            </mark>{" "}
-            <br />
-            <br /> -Eduardo W. (Source: TrustRadius)
+            “Very friendly tool to track time. With Everhour we can track
+            employees' and contractors' hours by client projects and run
+            reports. Also,{" "}
+            <mark>Everhour can be synced with our CRM's Asana and ClickUp</mark>{" "}
+            and the timer is directly there and time can be tracked. Time can be
+            added individually or in batches per week. You can also track time
+            off and select if those are holidays, sick leave, paid or unpaid
+            time."<br/><br/> — Claudia P. (Source: G2.com)
           </p>
         </div>
       </div>
@@ -556,7 +639,7 @@ const Asana = () => {
       </div>
       <div className={style.signupDiv}>
         <div className={style.leftSignupDiv}>
-          <h1>Asana time tracking made smart</h1>
+          <h1>ClickUp time tracking made smart</h1>
           <p>Try today for free to see how Everhour works for your business</p>
           <div className={style.signupInputDiv}>
             <Input type="text" placeholder="Work email..." />
@@ -571,7 +654,7 @@ const Asana = () => {
         </div>
         <div className={style.rightSignupDiv}>
           <ul>
-            <li>Works natively with Asana</li>
+            <li>Works natively with ClickUp</li>
             <li>Syncs automatically</li>
             <li>No long learning process</li>
             <li>Quick and easy to start</li>
@@ -581,6 +664,6 @@ const Asana = () => {
       </div>
     </>
   );
-}
+};
 
-export default Asana
+export default Clickup;

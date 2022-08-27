@@ -93,7 +93,7 @@
     background-color: #fcfaad;
 }
 
-.howDiv{
+/* .howDiv{
     margin: auto;
     width: 1040px;
     margin-top: 200px;
@@ -136,6 +136,57 @@
 .intCard p{
     color: #7C7C7C;
     font-size: 17px;
+} */
+
+
+.howTrack{
+    width: 800px;
+    margin: auto;
+}
+
+
+.howTrack ul{
+    list-style: none;
+}
+
+.howTrack li{
+    margin-top: 35px;
+}
+
+.howTrack h1{
+    font-size: 22px;
+    font-weight: 500;
+    color: #333333;
+    margin-top: -43px;
+}
+
+.howTrack p{
+    font-size: 21px;
+    margin-top: 10px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.howTrack img{
+    margin-top: 20px;
+}
+
+.howTrack>h1{
+    font-size: 36px;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 110px;
+}
+
+.howTrack ul li::before{
+    content: "\2022";
+    color: #57BB71;
+    font-weight: bold;
+    font-size: 40px;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    margin-top: -30px;
 }
 
 .starDiv{
@@ -211,19 +262,19 @@
     background-color: #fcfaad;
 }
 .reviewDiv>div:nth-child(2){
-    height: 520px;
+    height: 460px;
 }
 .reviewDiv>div:nth-child(3){
-    height: 500px;
+    height: 610px;
 }
 .reviewDiv>div:nth-child(4){
-    height: 320px;
+    height: 400px;
 }
 .reviewDiv>div:nth-child(5){
-    height: 540px;
+    height: 390px;
 }
 .reviewDiv>div:nth-child(6){
-    height: 420px;
+    height: 390px;
 }
 .reviewDiv p{
     font-size: 17px;
@@ -316,7 +367,7 @@
 }
 
 
-ul li::before{
+.rightSignupDiv ul li::before{
     content: "\2022";
     color: #57BB71;
     font-weight: bold;

@@ -11,9 +11,31 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FaGithub } from 'react-icons/fa';
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import {useDispatch} from "react-redux"
+import { signupreq } from "../reducer/authReducer/action";
 const Signup = () => {
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+  const [url,setUrl]=useState("");
+  const dispatch=useDispatch();
+  useEffect(()=>{
+    axios.get("https://obscure-reef-85874.herokuapp.com/auth/github/req").then(res=>setUrl(res.data)).catch(err=>console.log("hello"));
+  },[])
+
+
+
+
+const handleSignup=()=>{
+const payload={
+  email:email,
+  password:password
+}
+dispatch(signupreq(payload));
+}
+
+
   return (
     <Box>
       <Stack align={"center"} w={"60%"} margin="auto" marginBottom={8}>
@@ -35,14 +57,15 @@ const Signup = () => {
               leftIcon={<FaGithub />}
             >
               <Center>
-                <Text>Sign in with Github</Text>
+                <Text><a href={url}>Sign up with Github</a></Text>
               </Center>
             </Button>
           </Center>
           <Text>or</Text>
-          <Input marginRight={4} p={6} placeholder="Work email..."></Input>
-          <Button p={6} bg={"green.400"} color="white">
-            Try this free
+          <Input value={email} onChange={(e)=>setEmail(e.target.value)} marginRight={4} p={6} placeholder="Work email..."></Input>
+          <Input value={password} onChange={(e)=>setPassword(e.target.value)} marginRight={4} p={6} placeholder="password..."  />
+          <Button onClick={handleSignup} p={6} bg={"green.400"} color="white">
+            Sign up
           </Button>
         </VStack>
         <Text color={"#bcaa9c"}>
