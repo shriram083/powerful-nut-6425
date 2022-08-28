@@ -10,8 +10,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Integration = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Popover trigger={"hover"}>
@@ -44,7 +47,12 @@ const Integration = () => {
                   fontSize={"20px"}
                   color="gray"
                 >
-                  <Flex alignItems={"center"} gap="10px">
+                  <Flex
+                    alignItems={"center"}
+                    gap="10px"
+                    onClick={() => navigate("/asana")}
+                    cursor={"pointer"}
+                  >
                     <Box
                       height="16px"
                       width="16px"
@@ -134,7 +142,12 @@ const Integration = () => {
                   fontSize={"20px"}
                   color="gray"
                 >
-                  <Flex alignItems={"center"} gap="10px">
+                  <Flex
+                    alignItems={"center"}
+                    gap="10px"
+                    onClick={() => navigate("/asana")}
+                    cursor={"pointer"}
+                  >
                     <Box
                       height="16px"
                       width="16px"
