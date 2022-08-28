@@ -145,7 +145,7 @@ const Integration = () => {
                   <Flex
                     alignItems={"center"}
                     gap="10px"
-                    onClick={() => navigate("/asana")}
+                    onClick={() => navigate("/clickup")}
                     cursor={"pointer"}
                   >
                     <Box
