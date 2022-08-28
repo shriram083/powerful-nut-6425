@@ -7,7 +7,8 @@ import Login from "./pages/Login";
 import Price from "./pages/Price";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
-//import Check from "./pages/Check";
+import Asana from "./pages/Integration/Asana";
+import Clickup from "./pages/Integration/Clickup";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/price" element={<Price />} />
         <Route path="/demo" element={<Demo />} />
+        <Route path="/asana" element={<Asana />} />
+        <Route path="/clickup" element={<Clickup />} />
       </Routes>
 
       <Footer />
