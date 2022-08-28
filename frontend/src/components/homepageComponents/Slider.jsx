@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, useBreakpointValue } from "@chakra-ui/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -19,8 +19,13 @@ const images = [
 ];
 
 const Slider = () => {
+  const widthV = useBreakpointValue({
+    base: "100vh",
+    md: "1000px",
+  });
+
   return (
-    <Box>
+    <Box maxWidth={widthV}>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -34,7 +39,7 @@ const Slider = () => {
       >
         {images.map((el, i) => {
           return (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={i} maxWidth={widthV}>
               <Image src={`${el}`} margin={"auto"} />
             </SwiperSlide>
           );

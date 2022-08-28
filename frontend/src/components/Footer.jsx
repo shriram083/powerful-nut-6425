@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import Logo from "./footerComponents/Logo";
 import Company from "./footerComponents/Company";
 import Product from "./footerComponents/Product";
@@ -9,6 +9,11 @@ import Learns from "./footerComponents/Learns";
 import Download from "./footerComponents/Download";
 
 const Footer = () => {
+  const direction = useBreakpointValue({
+    base: "column",
+    md: "row",
+  });
+
   return (
     <Box
       backgroundColor={"black"}
@@ -22,6 +27,8 @@ const Footer = () => {
         justifyContent={"center"}
         gap={"40px"}
         alignItems={"flex-start"}
+        flexWrap={"wrap"}
+        flexDirection={direction}
       >
         <Logo />
         <Company />

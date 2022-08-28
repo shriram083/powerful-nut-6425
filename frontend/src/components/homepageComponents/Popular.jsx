@@ -1,7 +1,12 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 
 const Popular = () => {
+  const widthV = useBreakpointValue({
+    base: "100vh",
+    md: "none",
+  });
+
   return (
     <Box
       display={"flex"}
@@ -15,10 +20,19 @@ const Popular = () => {
         width={"700px"}
         m="auto"
         mb={"50px"}
+        maxWidth={widthV}
       >
         Track time and watch progress inside the most popular apps
       </Heading>
-      <Flex margin={"auto"} gap={"20px"} fontSize={"25px"} fontWeight={"500"}>
+      <Flex
+        margin={"auto"}
+        gap={"20px"}
+        fontSize={"25px"}
+        fontWeight={"500"}
+        flexWrap={"wrap"}
+        maxWidth={widthV}
+        justifyContent={"center"}
+      >
         <Flex
           alignItems={"center"}
           _hover={{ color: "#57bb71" }}

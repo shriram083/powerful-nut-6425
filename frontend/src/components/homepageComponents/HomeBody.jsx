@@ -1,7 +1,19 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 const HomeBody = ({ timeTracking }) => {
+  const widthV = useBreakpointValue({
+    base: "100vh",
+    md: "900px",
+  });
+
   return (
     <Flex
       justifyContent={"space-between"}
@@ -152,7 +164,7 @@ const HomeBody = ({ timeTracking }) => {
           </Box>
         </Flex>
       </Box>
-      <Image src={timeTracking} maxWidth={"800px"} />
+      <Image src={timeTracking} maxWidth={widthV} />
     </Flex>
   );
 };
